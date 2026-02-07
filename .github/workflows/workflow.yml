@@ -4,9 +4,10 @@ on: push
 
 jobs:
   build:
+    runs-on: self-hosted
     steps:
-      - name: Test runner
       - uses: actions/checkout@v6
+      - name: Test runner
         run: |
           echo "Running on : $HOSTNAME"
           echo "Working directory: $PWD"
